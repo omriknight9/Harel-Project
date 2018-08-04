@@ -1,0 +1,376 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+header {
+	width: 100%;
+	height: 35px;
+	background-color: #003e7c;
+}
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-image: url('../images/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+main {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+nav {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.logo {
+	transform: scale(.7);
+}
+
+ul {
+	padding: .2rem;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+}
+
+li:nth-child(1)::after {
+	content: '|';
+	padding: 1rem;
+	color: #2b6aaa;
+
+}
+
+.mainContainer {
+	width: 65%;
+	text-align: right;
+}
+
+.gemel {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #002448;
+	height: 70px;
+	margin-top: .5rem;
+}
+h2 {
+	margin-right: .6rem;
+	color: white;
+}
+
+.info {
+	margin-top: .5rem;
+	background-color: white;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.info span {
+	width: 20%;
+}
+.circle {
+	width: 10%;
+	margin: .7rem;
+}
+
+.generalInfo {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #033e7d;
+	clip-path: polygon(42% 0, 43% 0, 100% 0, 100% 100%, 40% 100%, 39% 100%, 11% 50%);
+	color: white;
+}
+
+.cardHolderInfo, .confirmation, {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	color: grey;
+}
+
+.investment {
+	margin-top: .5rem;
+	width: 100%;
+	height: 22rem;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.changeHeight {
+	animation: changeHeight 1s forwards;
+}
+
+.choosePlan {
+	width: 25%;
+	background-color: #033e7d;
+	color: white;
+}
+.choosePlan h3 {
+	font-size: 1.3rem;
+}
+.plan {
+	padding: 1rem;
+	width: 75%;
+	background-color: white;
+}
+.planHeader {
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.planParagraph {
+	font-size: .7rem;
+	color: grey;
+}
+
+.toggleArrow {
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+}
+
+.goUpAndDown {
+	animation: upAndDown 1s forwards;
+	/*display: none;*/
+}
+
+@keyframes upAndDown {
+	0% {
+		opacity: 1;	
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes changeHeight {
+	0% {
+		opacity: 1;	
+	}
+	
+	100% {
+		height: 100px;
+	}
+} 
+
+.checkBox {
+	margin-right: 2rem;
+	font-size: .7rem;
+	color: grey;
+}
+
+.hide {
+	color: transparent;
+}
+
+input {
+	direction: rtl;
+}
+
+form {
+	direction: rtl;
+}
+
+form label {
+	color: #033e7d;
+	font-weight: bold;
+}
+
+form label span {
+	margin: .3rem;
+	color: red;
+}
+
+#inlineRadio2, #inlineRadio1 {
+	margin-left: .3rem;
+}
+
+.forWho {
+	display: block;
+}
+
+.additionalInfo {
+	color: #033e7d;
+}
+
+.leftArrow {
+	width: 4%;
+}
+.continue {
+	height: 40px;
+	margin-top: .5rem;
+	text-align: left;
+	background-color: white;
+}
+
+.continueBtn {
+	height: 100%;
+	width: 13%;
+	background-color: #033e7d;
+	color: white;
+	border: none;
+}
+
+
+.forWho label {
+	padding-right: 1rem;
+	display: inline-block;
+	width: 100%;
+}
+
+.formRow label {
+	font-size: .8rem;
+}
+
+
+@media screen and (max-width: 1140px) {
+	.container {
+		width: 70%;
+	}
+	.info span {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.info span {
+		width: 30%;
+	}
+
+	.investment {
+		height: 25rem;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.formRow label {
+		font-size: .65rem;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		background-image: none;
+		background-color: lightgrey;
+	}
+	main {
+		padding: 0;
+		margin: .5rem;
+	}
+
+	.mainContainer {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+	}
+	.gemel {
+		height: 100px;
+	}
+	.gemel h2 {
+		font-size: 2.4rem;
+	}
+
+	.generalInfo {
+		width: 40% !important;
+	}
+
+	.circle {
+		width: 14%;
+		margin-right: 0;
+		margin-left: .3rem;
+	}
+
+	.investment {
+		height: 32rem;
+	}
+
+	.choosePlan {
+		display: none;
+	}
+	.plan {
+		width: 100%;
+		padding: 0;
+
+	}
+	.planHeader {
+		height: 50px;
+		display: flex;
+		box-sizing: border-box;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #033e7d;
+	}
+
+
+	.planParagraph {
+		font-size: 1.5rem;
+		color: white;
+	}
+	.planParagraph h3 {
+		margin-top: .5rem;
+	}
+
+	.continueBtn {
+		width: 20%;
+	}
+
+	.formSelect select {
+		direction: rtl;
+		width: 100%;
+	}
+
+	.formRow label {
+		font-size: 1rem;
+	}
+
+}
+
+@media screen and (max-width: 388px) {
+	header {
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 290px) {
+	header {
+		height: 85px;
+	}
+}
