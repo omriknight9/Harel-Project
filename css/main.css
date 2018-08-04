@@ -165,7 +165,6 @@ h2 {
 
 .goUpAndDown {
 	animation: upAndDown 1s forwards;
-	/*display: none;*/
 }
 
 @keyframes upAndDown {
@@ -233,6 +232,7 @@ form label span {
 .leftArrow {
 	width: 4%;
 }
+
 .continue {
 	height: 40px;
 	margin-top: .5rem;
@@ -247,7 +247,6 @@ form label span {
 	color: white;
 	border: none;
 }
-
 
 .forWho label {
 	padding-right: 1rem;
