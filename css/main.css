@@ -294,6 +294,14 @@ form label span {
 		margin: .5rem;
 	}
 
+	form {
+		margin-right: 3rem;
+	}
+
+	.bottomForm {
+		margin-top: 1rem;
+	}
+
 	.mainContainer {
 		margin: 0;
 		width: 100%;

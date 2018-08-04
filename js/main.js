@@ -18,19 +18,9 @@ checkWidth();
 
 window.addEventListener("resize", function() {
     if (window.matchMedia("(min-width: 768px)").matches) {
-    	cardHolderInfo.innerHTML = 'פרטי בעל החיסכון<img src="images/2.png" class="circle" alt="number two">';
-    	confirmation.innerHTML = 'אישור וסיכום<img src="images/3.png" class="circle" alt="number three">';
-    	planParagraph.innerHTML = 'באפשרותך לבחור את המסלול שבו יושקע הכסף  שלך, על  פי צרכיך ומידת הסיכון המתאימה לך';
-        lastName.classList.remove('col-12');
-        firstName.classList.remove('col-12');
-        formSelect.classList.remove('col-12');
+     	changeInnerHTMLAndRemoveClasses();
     } else {
-        cardHolderInfo.innerHTML = '<img src="images/2.png" class="circle" alt="number two">';
-        confirmation.innerHTML = '<img src="images/3.png" class="circle" alt="number three">';
-        planParagraph.innerHTML = '<h3>בחירת מסלול השקעה</h3>';
-        lastName.classList.add('col-12');
-        firstName.classList.add('col-12');
-        formSelect.classList.add('col-12');
+        changeInnerHTMLAndAddClasses();
     }
 });
 
@@ -38,18 +28,26 @@ function checkWidth() {
     var body = document.getElementsByTagName('body');
     var width = window.innerWidth || document.documentElement.clientWidth || body.clientWidth;
 	if (width <= 767) {
-		cardHolderInfo.innerHTML = '<img src="images/2.png" class="circle" alt="number two">';
-		confirmation.innerHTML = '<img src="images/3.png" class="circle" alt="number three">';
-		planParagraph.innerHTML = '<h3>בחירת מסלול השקעה</h3>';
-		lastName.classList.add('col-12');
-		firstName.classList.add('col-12');
-		formSelect.classList.add('col-12');
+		changeInnerHTMLAndAddClasses();
 	} else {
-		cardHolderInfo.innerHTML = 'פרטי בעל החיסכון<img src="images/2.png" class="circle" alt="number two">';
-		confirmation.innerHTML = 'אישור וסיכום<img src="images/3.png" class="circle" alt="number three">';
-		planParagraph.innerHTML = 'באפשרותך לבחור את המסלול שבו יושקע הכסף  שלך, על  פי צרכיך ומידת הסיכון המתאימה לך';
-		lastName.classList.remove('col-12');
-		firstName.classList.remove('col-12');
-		formSelect.classList.remove('col-12');
+		changeInnerHTMLAndRemoveClasses();
 	}
+}
+
+function changeInnerHTMLAndAddClasses() {
+	cardHolderInfo.innerHTML = '<img src="images/2.png" class="circle" alt="number two">';
+	confirmation.innerHTML = '<img src="images/3.png" class="circle" alt="number three">';
+	planParagraph.innerHTML = '<h3>בחירת מסלול השקעה</h3>';
+	lastName.classList.add('col-11');
+	firstName.classList.add('col-11');
+	formSelect.classList.add('col-11');
+}
+
+function changeInnerHTMLAndRemoveClasses() {
+	cardHolderInfo.innerHTML = 'פרטי בעל החיסכון<img src="images/2.png" class="circle" alt="number two">';
+	confirmation.innerHTML = 'אישור וסיכום<img src="images/3.png" class="circle" alt="number three">';
+	planParagraph.innerHTML = 'באפשרותך לבחור את המסלול שבו יושקע הכסף  שלך, על  פי צרכיך ומידת הסיכון המתאימה לך';
+	lastName.classList.remove('col-11');
+	firstName.classList.remove('col-11');
+	formSelect.classList.remove('col-11');
 }
